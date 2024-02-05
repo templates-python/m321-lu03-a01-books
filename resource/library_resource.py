@@ -5,10 +5,5 @@ from model.library import Library
 
 
 class LibraryResource(Resource):
-    def get(self):
-        library = Library()
-        books = library.book_list
-        http_status = 200
-        return make_response(
-            books, http_status
-        )
+    # TODO define services
+    pass
