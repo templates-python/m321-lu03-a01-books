@@ -35,7 +35,7 @@ class BookResource(Resource):
         book.title = args.title
         book.isbn = args.isbn
         book.author = args.author
-        book.price = args.price
+        book.price = float(args.price)
         library.save_books()
         return make_response('', 200)
 
@@ -50,10 +50,10 @@ class BookResource(Resource):
         book.title = args.title
         book.isbn = args.isbn
         book.author = args.author
-        book.price = args.price
+        book.price = float(args.price)
         library.book_list.append(book)
         library.save_books()
-        return make_response('', 200)
+        return make_response(book.book_uuid, 201)
 
     def delete(self, book_uuid):
         """
