@@ -13,8 +13,13 @@ def test_get_booklist(client):
     data = response.data.decode('utf-8')
     assert 'A dream of spring' in data
 
+
 def test_get_book(client):
-    assert True
+    response = client.get('/book/3247c340-c712-402e-b400-0a23a9368c97')
+    assert response.status_code == 200
+    data = response.data.decode('utf-8')
+    assert 'James Islington' in data
+
 
 def test_insert_book(client, new_book):
     response = client.post('/book', data=book_asdict(new_book))
