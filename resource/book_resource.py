@@ -1,3 +1,5 @@
+import uuid
+
 from flask import make_response
 from flask_restful import Resource, reqparse
 
@@ -44,6 +46,7 @@ class BookResource(Resource):
         library = Library()
         book = Book()
         args = self.parser.parse_args()
+        book.book_uuid = str(uuid.uuid4())
         book.title = args.title
         book.isbn = args.isbn
         book.author = args.author
@@ -62,4 +65,5 @@ class BookResource(Resource):
             return make_response('', 404)
         position = library.book_list.index(book)
         library.book_list.pop(position)
+        library.save_books()
         return make_response('', 200)
