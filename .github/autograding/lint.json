@@ -1,0 +1,5 @@
+{
+  "files": ["book_resource.py", "library_resource.py"],
+  "ignore" : [],
+  "max": 20
+}
