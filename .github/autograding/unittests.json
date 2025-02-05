@@ -1,0 +1,32 @@
+[
+  {
+    "name": "test_get_booklist",
+    "function": "test_get_booklist",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_get_book",
+    "function": "test_get_book",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_update_book",
+    "function": "test_get_booklist",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_delete_book",
+    "function": "test_get_booklist",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_get_booklist",
+    "function": "test_get_booklist",
+    "timeout": 10,
+    "points": 1
+  }
+]
